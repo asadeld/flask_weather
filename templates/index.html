@@ -8,23 +8,30 @@
 
 </head>
 <body>
-    <header class="header">
-        <div class="header_logo">
-            Portfolio
-        </div>
-        <div class="header_menu">
-            <ul>
-                <li>
-                    <a href="/">Главная</a>
-                </li>
-                  <li>
-                    <a href="/">Мои работы</a>
-                </li>
-                  <li>
-                    <a href="/">Контакты</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <div class="container">
+        <h1>Узнать погоду в любом городе</h1>
+        <form action="" method="post">
+            <input type="text" name="city" placeholder="Введите город" required>
+            <button type="submit">Подтвердить</button>
+        </form>
+        {% if  error %}
+            <div class="error">{{error}}</div>
+        {% endif %}
+        {% if weather %}
+            <div class="weather-card">
+                <h2>{{weather.city}}</h2>
+
+                <div class="weather-main">
+                     <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png" >
+                    <div class="temp">{{weather.temp}} °C</div>
+                </div>
+                <div class="weather-desc">{{weather.description}}</div>
+                <div class="weather-details">
+                    <div>Ощущается как: {{weather.feels_like}}</div>
+                    <div>Влажность: {{weather.humidity}}</div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>

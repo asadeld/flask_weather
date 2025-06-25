@@ -1,6 +1,18 @@
-.header{
-    font-family: Arial;
-    width: 700px;
-    margin: 10px auto;
-    display: flex
+body{
+    font-family: 'Arial';
+    background: linear-gradient(135deg, #72edf2 0%, #5151e5 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333
+}
+.container{
+    width: 90%;
+    background-color: rgba(255,255,255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0, 0.3);
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center
 }
