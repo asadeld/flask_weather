@@ -32,6 +32,23 @@
                 </div>
             </div>
         {% endif %}
+        <div class="list_city">
+            {% for key,weather in city_dict.items() %}
+               <div class="list_city-item">
+                <h2>{{weather.city}}</h2>
+
+                <div class="weather-main">
+                     <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png" >
+                    <div class="temp">{{weather.temp}} °C</div>
+                </div>
+                <div class="weather-desc">{{weather.description}}</div>
+                <div class="weather-details">
+                    <div>Ощущается как: {{weather.feels_like}}</div>
+                    <div>Влажность: {{weather.humidity}}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>

@@ -16,3 +16,42 @@ body{
     margin: 20px auto;
     text-align: center
 }
+h1{
+    color: #5151e5;
+}
+input{
+    padding: 10px 15px;
+    border: 2px solid  #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 70%;
+    transition: border 0.3s;
+    text-align: center
+}
+
+input:focus{
+    border-color: #5151e5;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #5151e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px
+}
+button:hover{
+    background-color: #234cba
+}
+.list_city{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list_city-item{
+    width: 160px
+}
